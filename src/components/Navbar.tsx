@@ -1,10 +1,34 @@
+import { MoonIcon, SunIcon } from 'lucide-react'
+import { useTheme } from '@/context/theme-provider'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar: React.FC = () => {
+    const { theme, setTheme } = useTheme()
+    const isDark = theme === "dark";
+
     return (
-        <header>
-            <nav className=''>
-<h2>Navbar</h2>
+        <header className='sticky top-0 z-50 border-b bg-background/95  backdrop-blur py-2 supports-[backdrop-filter]:bg-background/60 '>
+            <nav className='container mx-auto flex justify-between items-center px-4 h-16'>
+                <Link to={"/"} className='text-2xl text-purple-500'>Weather-<span className='text-gray-400'>X</span></Link>
+                <div className='flex gap-4'>
+                    <Link to={"/"}>Search Box</Link>
+                    <Link to={"/about"}>About</Link>
+                    <Link to={"/about"}>Services</Link>
+
+                    <div onClick={() => setTheme(isDark ? "light" : "dark")} className="cursor-pointer flex items-center gap-2">
+                        {isDark ? (
+                            <>
+                                <SunIcon size={20} />
+                            </>
+                        ) : (
+                            <>
+                                <MoonIcon size={20} />
+                            </>
+                        )}
+                    </div>
+
+                </div>
             </nav>
         </header>
     )
