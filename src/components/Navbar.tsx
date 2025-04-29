@@ -14,12 +14,10 @@ const Navbar: React.FC = () => {
                 <div className='flex gap-4'>
                     <Link to={"/"}>Search Box</Link>
                     <Link to={"/about"}>About</Link>
-                    <Link to={"/about"}>Services</Link>
-
-                    <div onClick={() => setTheme(isDark ? "light" : "dark")} className="cursor-pointer flex items-center gap-2">
+                    <div onClick={() => setTheme(isDark ? "light" : "dark")} className={`flex items-center cursor-pointer transition-transform duration-500 ${isDark ? "rotate-180" : "rotate-0"}`}>
                         {isDark ? (
                             <>
-                                <SunIcon size={20} />
+                                <SunIcon className='text-yellow-500 rotate-0 transition-all' size={20} />
                             </>
                         ) : (
                             <>
@@ -33,5 +31,4 @@ const Navbar: React.FC = () => {
         </header>
     )
 }
-
 export default Navbar
