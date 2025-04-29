@@ -1,13 +1,11 @@
 import React from 'react'
-import { Button } from './components/ui/button'
+import { BrowserRouter } from 'react-router-dom'
 
 const App: React.FC = () => {
   return (
-    <div>
-      <div className='p-6'>
-        <Button variant={"default"} size={"lg"}>Click Me</Button>
-      </div>
-    </div>
+    <BrowserRouter>
+
+    </BrowserRouter>
   )
 }
 
