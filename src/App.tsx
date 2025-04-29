@@ -6,6 +6,7 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Layout >
+        <h1>Hello there</h1>
       </Layout>
     </BrowserRouter>
   )
