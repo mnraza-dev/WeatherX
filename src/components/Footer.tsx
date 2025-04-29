@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom'
 
 const Footer: React.FC = () => {
     return (
-        <footer className='p-8 bg-blue-100  flex items-center justify-center'>
-            <p className='text-lg '>Made with ♥️ by <Link className='text-blue-800 leading-0.5' target='_blank' to={"https://www.x.com/mnraza1907"}>MN Raza</Link> </p>
+        <footer className='border-t backdrop-blur-sm py-12 '>
+            <div className='container mx-auto px-4 text-center text-gray-400'>
+                <p className='text-lg '>Made with ♥️ by <Link target='_blank' to={"https://www.x.com/mnraza1907"}>MN Raza</Link> </p>
+            </div>
         </footer>
     )
 }
