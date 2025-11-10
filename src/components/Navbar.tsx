@@ -15,11 +15,11 @@ const Navbar: React.FC = () => {
                     <div onClick={() => setTheme(isDark ? "light" : "dark")} className={`flex items-center cursor-pointer transition-transform duration-500 ${isDark ? "rotate-180" : "rotate-0"}`}>
                         {isDark ? (
                             <>
-                                <SunIcon className='text-yellow-500 rotate-0 transition-all' size={20} />
+                                <SunIcon className='text-yellow-500 rotate-0 transition-all' size={24} />
                             </>
                         ) : (
                             <>
-                                <MoonIcon size={20} />
+                                <MoonIcon size={24} />
                             </>
                         )}
                     </div>
